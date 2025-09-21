@@ -64,7 +64,7 @@ Installation
 
 Clone the repository:
 
-git clone [https://github.com/your-username/savr-ai.git](https://github.com/your-username/savr-ai.git)
+git clone [https://github.com/your-username/savr-ai.git](https://github.com/Harsha-Sampangi/savr-ai.git)
 cd savr-ai
 
 Create and activate a virtual environment:
