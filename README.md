@@ -1,5 +1,5 @@
 SAVR-AI: AI-Powered Smart Attendance System
-SAVR-AI is a modern, full-stack web application designed to eliminate the daily inefficiency of manual attendance tracking in educational institutions. It leverages the power of AI-powered face recognition to create a seamless, accurate, and instantaneous attendance system from a single classroom photo.
+SAVR-AI is a modern, full-stack web application designed to eliminate the daily inefficiency of manual attendance tracking in educational institutions. It leverages the power of AI-powered face recognition to create a seamless, accurate, and instantaneous attendance system from a single classroom photo and video (Though the CCTV camer).
 
 📸 Project Showcase
 
