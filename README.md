@@ -1,71 +1,47 @@
-SAVR-AI: AI-Powered Smart Attendance System
-SAVR-AI is a modern, full-stack web application designed to eliminate the daily inefficiency of manual attendance tracking in educational institutions. It leverages the power of AI-powered face recognition to create a seamless, accurate, and instantaneous attendance system from a single classroom photo and video (Though the CCTV camer).
+SAVR Attend - AI-Powered Attendance System
+SAVR Attend is a smart, AI-driven attendance management system built with Python and Streamlit. It leverages real-time face recognition to automate the tedious process of taking attendance, providing a seamless experience for both teachers and students through an intuitive web interface.
 
-📸 Project Showcase
+✨ Key Features
+👤 Dual User Dashboards: Separate, secure login and dashboard views for Teachers and Students.
 
-Here's a look at the SAVR-AI application in action.
+📸 Photo-Based Attendance: Teachers can upload a single classroom photo, and the system automatically detects and marks all recognized students.
 
-Teacher Dashboard
+🎥 Live CCTV Monitoring: Monitor attendance in real-time using a live feed from a CCTV camera (via RTSP URL) or a standard webcam.
 
-AI Detection Results
+🤔 Manual Review System: For low-confidence matches, the system prompts the teacher to manually confirm a student's status (Present or Absent), ensuring 100% accuracy.
 
-Attendance Reports
+⬆️ Bulk Student Enrollment: Easily enroll an entire class by uploading an Excel file with student details and a ZIP file with their photos.
 
+📊 Dynamic Reporting: All attendance sessions are saved as CSV files. The reports page allows teachers to load, view, and analyze past attendance records with visual charts.
 
+🖼️ Visual Feedback: Both photo and CCTV modes provide visual feedback by drawing bounding boxes around detected faces (Green for recognized, Red for unknown).
 
+🛠️ Technology Stack
+Backend: Python
 
+Web Framework: Streamlit
 
+Face Recognition: face_recognition (built on dlib)
 
+Image Processing: OpenCV, Pillow
 
-🎯 Key Features
-AI-Powered Face Recognition: Uses a state-of-the-art model to detect and identify multiple students from a single classroom image.
-
-Complete Attendance Status: Intelligently marks every student as "Present," "Absent," or flags them for "Low Confidence" manual review.
-
-Intuitive Teacher Dashboard: A central hub providing an overview of the day's schedule and one-click access to all features.
-
-Efficient Class Management:
-
-Manual Enrollment: Easily add new students by taking or uploading a photo.
-
-Bulk Import: Enroll an entire class roster in seconds using an Excel manifest and a ZIP file of photos.
-
-Insightful Analytics: The "Attendance Reports" page features a dynamic dashboard with summary metrics, interactive charts, and a detailed data table to track trends.
-
-Multi-Page Interface: A clean, organized, and user-friendly interface built with Streamlit's multi-page app capabilities.
-
-⚙️ Technology Stack
-Backend & Frontend: Streamlit
-
-AI & Computer Vision:
-
-face_recognition: For the core face detection and recognition logic.
-
-OpenCV: For image processing and manipulation.
-
-Pillow (PIL): For image handling.
-
-Data Handling: Pandas
-
-Data Visualization: Matplotlib
-
-File Handling: PyMuPDF (fitz) for PDF processing, openpyxl for Excel.
+Data Handling: Pandas, NumPy
 
 🚀 Getting Started
-Follow these instructions to set up and run the SAVR-AI project on your local machine.
+Follow these instructions to set up and run the project on your local machine.
 
-Prerequisites
+1. Prerequisites
 
-Python 3.9+
+Python 3.9 or higher
 
-For macOS, you may need to install Xcode command-line tools: xcode-select --install
+pip for package management
 
-Installation
+2. Installation
 
 Clone the repository:
 
-git clone [https://github.com/your-username/savr-ai.git](https://github.com/Harsha-Sampangi/savr-ai.git)
-cd savr-ai
+git clone [https://github.com/your-username/SAVR-AI.git](https://github.com/your-username/SAVR-AI.git)
+cd SAVR-AI
 
 Create and activate a virtual environment:
 
@@ -77,54 +53,51 @@ source .venv/bin/activate
 python -m venv .venv
 .\.venv\Scripts\activate
 
-Install the required libraries:
-A requirements.txt file is the standard way to manage dependencies. Create a file named requirements.txt with the following content:
+Install the required dependencies:
+The project is organized within the savr_ai folder. Install requirements from there:
 
-streamlit==1.31.0
-opencv-python==4.9.0.80
-numpy==1.26.4
-face-recognition==1.3.0
-pandas==2.1.4
-Pillow==10.2.0
-matplotlib
-openpyxl
-PyMuPDF
+pip install -r savr_ai/requirements.txt
 
-Then, install everything with one command:
+3. Setup
 
-pip install -r requirements.txt
+Create Data Folders: Before running the app, ensure the dataset and attendance_reports folders exist in the root directory (SAVR-AI/).
 
-Running the Application
+Enroll Students: Add student images to the SAVR-AI/dataset/ folder. The filename for each image must be in the format: ROLL_NUMBER - NAME.jpg.
 
-Once the installation is complete, run the following command in your terminal:
+Example: CS001 - Alice Johnson.jpg
 
-streamlit run app.py
+4. Running the Application
 
-Your web browser will open, and you can start using the SAVR-AI application.
+Navigate to the root project directory (SAVR-AI/) and run the Streamlit app:
+
+streamlit run savr_ai/app.py
+
+The application will open in your default web browser.
 
 📖 How to Use
-Log In: Use the demo credentials to log in.
+Login: Use the demo credentials to log in as a Teacher or Student.
 
-Enroll Students:
+Teacher: teacher@demo.com / demo123
 
-Navigate to Class Management.
+Student: student@demo.com / demo123
 
-Use the Bulk Import feature by uploading an Excel manifest and a ZIP file of photos.
-
-Alternatively, enroll students one by one using the Manual Enroll form.
+Manage Classes: Use the "Class Management" page to enroll new students manually or in bulk.
 
 Take Attendance:
 
-Navigate to the Dashboard and click "Upload Photo" or go directly to the AI Attendance Detection page.
+Navigate to "Take Attendance," upload a class photo, and click "Analyze."
 
-Upload a photo of the classroom.
+Review the results, correct any low-confidence matches, and click "Save & Continue."
 
-Click "Analyze Photo" to see the complete attendance results.
+CCTV Monitoring:
 
-View Reports:
+Go to the "CCTV Monitoring" page and click "Start Monitoring."
 
-Go to the Attendance Reports page to see analytics and data visualizations.
+Click "Stop Monitoring" to end the session.
 
-⚖️ License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+Review the detected students and save the report.
 
+View Reports: On the "Reports" page, select a saved CSV file from the dropdown to view detailed attendance data and visualizations.
+
+📄 License
+This project is licensed under the MIT License. See the LICENSE.md file for details.
