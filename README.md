@@ -40,7 +40,7 @@ pip for package management
 
 Clone the repository:
 
-git clone [https://github.com/your-username/SAVR-AI.git](https://github.com/your-username/SAVR-AI.git)
+git clone [https://github.com/Harsha-Sampangi/SAVR-AI.git](https://github.com/Harsha-Sampangi/SAVR-AI.git)
 cd SAVR-AI
 
 Create and activate a virtual environment:
